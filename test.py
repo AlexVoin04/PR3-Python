@@ -53,7 +53,7 @@ try:
     number = len(data)
     p = number / len(words)
     with open('f.txt', 'r') as file:
-        min = min(file, key=len)
+        min: str = min(file, key=len)
     with open('f.txt', 'r') as file:
         max = max(file, key=len)
     print(f"Всего символов:{number}\n"

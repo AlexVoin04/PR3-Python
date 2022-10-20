@@ -5,6 +5,7 @@ glasn: int = 0
 file = open('f.txt', 'r')
 data = file.read()
 words = data.split()
+min = min(file, key=len)
 for slovo in file:
         for sim in slovo:
                 if sim in symbols:
