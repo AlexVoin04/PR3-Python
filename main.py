@@ -21,8 +21,6 @@ def rand(n, num):
         pass
 
 
-
-
 if __name__ == '__main__':
     manager = multiprocessing.Manager()
 
@@ -42,21 +40,18 @@ if __name__ == '__main__':
         pass
 
 
-
-
-
 def get_min(file):
-    m = ""
+    m: str = ""
     with open(f'{file}', 'r') as file1:
-        m: str = min(file1, key=len)
-    return len(m)-1
+        m = min(file1, key=len)
+    return len(m) - 1
 
 
 def get_max(file):
     m: str = ""
     with open(f'{file}', 'r') as file1:
-        m: str = max(file1, key=len)
-    return len(m)-1
+        m = max(file1, key=len)
+    return len(m) - 1
 
 
 def get_all(file):
@@ -171,17 +166,3 @@ def get_sl(file):
                     sl10 += 1
     return [sl1, sl2, sl3, sl4, sl5, sl6, sl6, sl7, sl8, sl9, sl10]
 
-#def get_sl_all(file):
- #   dict = {'1': 1,
- #           '2': 2,
- #           '3': 3,
- #           '4': 4,
- #           '5': 5,
- #           '6': 6,
- #           '7': 7,
- #           '8': 8,
- #           '9': 9,
- #           '10': 0}
- #   with open(f'{file}', 'r') as file1:
- #       for line in file1.readlines():
- #           if len(line) == dict.get()
